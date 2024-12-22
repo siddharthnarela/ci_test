@@ -10,23 +10,28 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    # Using a specific Ubuntu version (22.04) to avoid issues with future Ubuntu versions
+    runs-on: ubuntu-22.04
 
     steps:
+    # Step 1: Check out the code from the repository
     - name: Check out code
       uses: actions/checkout@v2
 
+    # Step 2: Set up Node.js (using version 16)
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
         node-version: '16'
 
-
+    # Step 3: Install project dependencies
     - name: Install dependencies
       run: npm install
 
+    # Step 4: Run tests if you have them set up
     - name: Run tests
       run: npm test
 
+    # Step 5: Build the project (optional, only if you have a build script in your package.json)
     - name: Build project
       run: npm run build
