@@ -32,6 +32,4 @@ jobs:
     - name: Run tests
       run: npm test
 
-    # Step 5: Build the project (optional, only if you have a build script in your package.json)
-    - name: Build project
-      run: npm run build
+   
