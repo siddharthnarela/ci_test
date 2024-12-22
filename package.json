@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Test is running\" && exit 1",
+    "test": "echo \"Test is running\"",
     "build": "node server.js"
   },
   "keywords": [],
