@@ -14,6 +14,7 @@ app.get('/hello', (req, res) => {
 
     res.json({
         message: "Hello",
+        message: "Test",
         message: "Test"
     })
 })
